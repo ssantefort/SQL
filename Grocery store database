@@ -1,0 +1,25 @@
+--create a grocery store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER, price INTEGER);
+
+INSERT INTO store VALUES (1, "bananas", 67, 5, 1);
+INSERT INTO store VALUES (2, "apples", 100, 5, 3);
+INSERT INTO store VALUES (3, "toothpaste", 200, 7, 4);
+INSERT INTO store VALUES (4, "shampoo", 239, 8, 7);
+INSERT INTO store VALUES (5, "deodorant", 300, 4, 9);
+INSERT INTO store VALUES (6, "pretzels", 67, 3, 9);
+INSERT INTO store VALUES (7, "gum", 500, 1, 2);
+INSERT INTO store VALUES (8, "socks", 23, 37, 7);
+INSERT INTO store VALUES (9, "sweatpants", 12, 28, 20);
+INSERT INTO store VALUES (10, "boots", 7, 29, 35);
+INSERT INTO store VALUES (11, "toiletpaper", 12, 13, 10);
+INSERT INTO store VALUES (12, "papertowel", 12, 13, 10);
+INSERT INTO store VALUES (13, "dogfood", 12, 9, 2);
+INSERT INTO store VALUES (14, "hairspray", 56, 8, 8);
+INSERT INTO store VALUES (15, "cucumber", 43, 2, 2);
+
+--display the products with less than 50 items in stock
+SELECT * FROM store WHERE quantity < 50 ORDER BY aisle;
+
+--display the products with more than 50 items in stock
+SELECT * FROM store WHERE quantity > 50 ORDER BY aisle;
